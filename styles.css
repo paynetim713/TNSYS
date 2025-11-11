@@ -1,0 +1,1783 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -8px, 0);
+  }
+  70% {
+    transform: translate3d(0, -4px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+@keyframes megaOrb1 {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1) rotate(180deg);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+.animate-megaOrb1 {
+  animation: megaOrb1 8s ease-in-out infinite;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+/* 移动端优化 */
+@media (max-width: 640px) {
+  .mobile-padding {
+    padding: 1rem;
+  }
+  
+  .mobile-text-xs {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+  
+  .mobile-text-sm {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+  
+  .mobile-text-lg {
+    font-size: 1.125rem;
+    line-height: 1.4;
+  }
+  
+  .mobile-text-xl {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+  
+  .mobile-text-2xl {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  
+  .mobile-text-3xl {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+  
+  .mobile-text-4xl {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .mobile-grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .mobile-space-y-2 > * + * {
+    margin-top: 0.75rem;
+  }
+  
+  .mobile-space-y-4 > * + * {
+    margin-top: 1.25rem;
+  }
+  
+  .mobile-space-y-6 > * + * {
+    margin-top: 1.75rem;
+  }
+  
+  .mobile-space-y-8 > * + * {
+    margin-top: 2.25rem;
+  }
+
+  /* 移动端卡片布局优化 */
+  .mobile-card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1rem;
+  }
+
+  /* 移动端卡片样式优化 */
+  .mobile-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+  }
+
+  /* 移动端按钮组优化 */
+  .mobile-button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .mobile-button-group button {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    min-height: 48px;
+    border-radius: 0.75rem;
+    font-weight: 500;
+  }
+
+  /* 移动端表格优化 */
+  .mobile-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-table {
+    min-width: 100%;
+    font-size: 0.9rem;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .mobile-table th,
+  .mobile-table td {
+    padding: 0.75rem 0.5rem;
+    white-space: nowrap;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .mobile-table th {
+    background: #f8fafc;
+    font-weight: 600;
+    color: #374151;
+  }
+
+  .mobile-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* 移动端表单优化 */
+  .mobile-form-container {
+    padding: 1.25rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .mobile-form-container .form-group {
+    margin-bottom: 1.25rem;
+  }
+
+  .mobile-form-container input,
+  .mobile-form-container select,
+  .mobile-form-container textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    min-height: 48px;
+    border-radius: 0.75rem;
+    border: 1px solid #d1d5db;
+    background: #f9fafb;
+    transition: all 0.2s ease;
+  }
+
+  .mobile-form-container input:focus,
+  .mobile-form-container select:focus,
+  .mobile-form-container textarea:focus {
+    background: white;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+
+  /* 移动端导航菜单优化 */
+  .mobile-nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0.875rem 1rem;
+    margin: 0.25rem 0;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+  }
+
+  .mobile-nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  /* 移动端头像下拉菜单优化 */
+  .mobile-user-menu {
+    position: fixed;
+    top: 60px;
+    right: 1rem;
+    left: 1rem;
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 99999;
+    padding: 0.5rem;
+  }
+
+  .mobile-user-menu button {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    text-align: left;
+    border-radius: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  /* 移动端视频卡片优化 */
+  .video-card {
+    transition: transform 0.2s ease;
+  }
+
+  .video-card:hover {
+    transform: translateY(-2px);
+  }
+
+  /* 移动端按钮优化 */
+  .mobile-btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    min-height: 44px;
+    border-radius: 0.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 移动端文本优化 */
+  .mobile-text-responsive {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    line-height: 1.5;
+  }
+
+  /* 移动端间距优化 */
+  .mobile-space-y-2 > * + * {
+    margin-top: 0.5rem;
+  }
+
+  .mobile-space-y-3 > * + * {
+    margin-top: 0.75rem;
+  }
+
+  .mobile-space-y-4 > * + * {
+    margin-top: 1rem;
+  }
+
+  .mobile-space-y-6 > * + * {
+    margin-top: 1.5rem;
+  }
+
+  /* 移动端容器优化 */
+  .mobile-container {
+    padding: 0.75rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* 移动端网格优化 */
+  .mobile-grid-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .mobile-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  /* 移动端flex优化 */
+  .mobile-flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .mobile-flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  /* 移动端统计卡片优化 */
+  .mobile-stat-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-stat-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+
+  .mobile-stat-card p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 0;
+  }
+
+  /* 移动端视频卡片优化 */
+  .mobile-video-card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.25rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .mobile-video-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .mobile-video-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .mobile-video-card-content {
+    padding: 1.25rem;
+  }
+
+  .mobile-video-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .mobile-video-card p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  /* 移动端按钮优化 */
+  .mobile-btn-primary {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    min-height: 48px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+  }
+
+  .mobile-btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+  }
+
+  .mobile-btn-secondary {
+    background: white;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    min-height: 48px;
+    transition: all 0.2s ease;
+  }
+
+  .mobile-btn-secondary:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+  }
+
+  /* 移动端侧边栏优化 */
+  .sidebar-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 50;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar-mobile.open {
+    transform: translateX(0);
+  }
+  
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+  }
+  
+  /* 移动端主内容区域 */
+  .main-content-mobile {
+    width: 100%;
+    margin-left: 0;
+    padding: 0.75rem;
+  }
+  
+  /* 移动端卡片优化 */
+  .card-mobile {
+    margin-bottom: 1rem;
+    border-radius: 0.75rem;
+    padding: 1rem;
+  }
+  
+  /* 移动端按钮优化 */
+  .btn-mobile {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    min-height: 44px;
+  }
+  
+  /* 移动端表格优化 */
+  .table-mobile {
+    font-size: 0.875rem;
+  }
+  
+  .table-mobile th,
+  .table-mobile td {
+    padding: 0.5rem 0.25rem;
+  }
+  
+  /* 移动端表单优化 */
+  .form-mobile input,
+  .form-mobile select,
+  .form-mobile textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+    min-height: 44px;
+  }
+  
+  /* 移动端导航优化 */
+  .nav-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    z-index: 30;
+    padding: 0.5rem;
+  }
+  
+  /* 移动端模态框优化 */
+  .modal-mobile {
+    margin: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .tablet-padding {
+    padding: 1.5rem;
+  }
+  
+  .tablet-text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .tablet-text-lg {
+    font-size: 1.125rem;
+  }
+  
+  .tablet-text-xl {
+    font-size: 1.25rem;
+  }
+  
+  .tablet-text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .tablet-text-3xl {
+    font-size: 1.875rem;
+  }
+  
+  .tablet-grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .tablet-grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* 防止全局横向滚动 */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* 防止内容超出容器 */
+* {
+    box-sizing: border-box;
+}
+
+/* 主内容区域防止溢出 */
+main {
+    max-width: 100%;
+    overflow-x: hidden;
+    /* 允许垂直滚动，根据内容高度 */
+    overflow-y: auto;
+    min-height: calc(100vh - 80px);
+    /* 确保内容不会超出容器 */
+    box-sizing: border-box;
+    position: relative;
+    flex: 1;
+}
+
+/* 确保页面内容能够正确填充 */
+.page-content {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 内容区域自动调整高度 */
+.content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 防止内容区域出现不必要的空白 */
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+/* 确保滚动容器正确工作 */
+.scroll-container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+/* 修复可能的滚动问题 */
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 确保主应用容器正确填充 */
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 修复可能的空白区域 */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+/* 确保页面内容区域正确填充 */
+.page-content {
+    min-height: calc(100vh - 80px);
+    padding: 1.5rem;
+}
+
+/* 修复可能的底部空白 */
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* 确保flex容器正确工作 */
+.flex {
+    min-height: 0;
+}
+
+.flex-1 {
+    flex: 1 1 0%;
+    min-height: 0;
+}
+
+/* 确保主容器正确填充视口 */
+.h-screen {
+    height: 100vh;
+}
+
+.min-h-screen {
+    min-height: 100vh;
+}
+
+/* 修复可能的滚动问题 */
+.overflow-y-auto {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 确保内容区域没有不必要的空白 */
+.space-y-8 > * + * {
+    margin-top: 2rem;
+}
+
+/* 修复可能的底部空白问题 */
+main {
+    padding-bottom: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 确保主内容区域正确填充 */
+.main-content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+/* 防止底部空白区域 - 使用固定高度 */
+.flex.h-screen {
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.flex.h-screen .flex-1 {
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+/* 确保主内容区域可以滚动 */
+.flex.h-screen .flex-1 main {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 确保主内容区域正确滚动 */
+main.overflow-y-auto {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 #f7fafc;
+    /* 确保内容区域可以动态调整高度 */
+    min-height: 0;
+    flex: 1;
+}
+
+/* 确保页面内容可以根据内容多少动态滚动 */
+.page-content {
+    min-height: auto;
+    height: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 确保所有页面组件都能正确滚动 */
+.page-container {
+    min-height: auto;
+    height: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    /* 确保内容不会被截断 */
+    max-height: none;
+}
+
+/* 修复可能的滚动容器问题 */
+.overflow-y-auto {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    /* 确保滚动区域有足够的高度 */
+    min-height: 0;
+    flex: 1;
+}
+
+main.overflow-y-auto::-webkit-scrollbar {
+    width: 6px;
+}
+
+main.overflow-y-auto::-webkit-scrollbar-track {
+    background: #f7fafc;
+}
+
+main.overflow-y-auto::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 3px;
+}
+
+main.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+/* 表格容器响应式 */
+.overflow-x-auto {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+}
+
+/* 弹窗样式优化 - 防止无限滚动 */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 9999;
+    overflow: hidden;
+    /* 确保弹框在最顶层 */
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 42rem; /* max-w-2xl */
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    flex-shrink: 0;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+}
+
+.modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+    max-height: calc(90vh - 120px); /* 减去header和可能的footer高度 */
+    /* 确保内容可以正确滚动 */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 #f7fafc;
+}
+
+.modal-footer {
+    flex-shrink: 0;
+    padding: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    background: white;
+}
+
+/* 表格最小宽度提示 */
+table.min-w-\[600px\],
+table.min-w-\[800px\] {
+    width: 100%;
+}
+
+/* 防止所有元素超出容器 */
+.container, .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl, .max-w-2xl, .max-w-xl, .max-w-lg, .max-w-md, .max-w-sm {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* 确保所有flex容器不会超出 */
+.flex, .flex-col, .flex-row, .grid {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* 防止表格导致水平滚动 */
+.table-container {
+    overflow-x: auto;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 确保弹窗内容不会超出 */
+.modal-body * {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    table.min-w-\[600px\] {
+        min-width: 600px;
+    }
+    table.min-w-\[800px\] {
+        min-width: 800px;
+    }
+}
+
+/* 侧边栏滚动区域样式 */
+.sidebar-scroll {
+    /* 确保滚动区域正确设置 */
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* 使用flex-1确保占满剩余空间 */
+    flex: 1;
+    /* 设置最小高度为0，允许flex收缩 */
+    min-height: 0;
+    /* 添加内边距 */
+    padding-bottom: 1.5rem;
+    /* 滚动条样式 */
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    transition: scrollbar-color 0.3s ease;
+}
+
+/* 自定义滚动条样式 - 只在悬停时显示 */
+.sidebar-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-scroll:hover::-webkit-scrollbar-thumb {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* Firefox 滚动条悬停效果 */
+.sidebar-scroll:hover {
+    scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+}
+
+/* 侧边栏主容器确保正确的高度设置 */
+.sidebar-gradient {
+    background: linear-gradient(180deg, #1e3a8a 0%, #1e40af 50%, #2563eb 100%);
+    position: relative;
+    overflow: hidden;
+    /* 确保侧边栏占满父容器高度 */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 确保侧边栏导航区域正确滚动 */
+.sidebar-scroll nav {
+    /* 确保导航内容能够正确布局 */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* 当侧边栏展开时，确保内容可以滚动 */
+.sidebar-gradient.w-64 .sidebar-scroll {
+    /* 展开状态下确保滚动 */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* 当侧边栏收缩时，通常不需要滚动 */
+.sidebar-gradient.w-20 .sidebar-scroll {
+    /* 收缩状态下通常不需要滚动，但保留以防内容过多 */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.gradient-bg {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #3b82f6 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+
+button.gradient-bg,
+.gradient-bg-button {
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+}
+
+
+.gradient-bg::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.8) 0%, transparent 40%);
+    animation: megaOrb1 8s ease-in-out infinite;
+}
+
+.gradient-bg::after {
+    content: '';
+    position: absolute;
+    bottom: -60%;
+    right: -60%;
+    width: 220%;
+    height: 220%;
+    background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.7) 0%, transparent 40%);
+    animation: megaOrb2 10s ease-in-out infinite;
+}
+
+@keyframes megaOrb1 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(50%, 30%) scale(1.4);
+    }
+}
+
+@keyframes megaOrb2 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(-40%, -25%) scale(1.5);
+    }
+}
+
+
+
+
+.sidebar-gradient::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -20%;
+    width: 80%;
+    height: 120%;
+    background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.3) 0%, transparent 60%);
+    animation: sidebarFlow 12s ease-in-out infinite;
+}
+
+@keyframes sidebarFlow {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateY(20%) scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+
+.stat-card {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s;
+}
+
+.stat-card:hover::before {
+    left: 100%;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+
+.video-card {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.video-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 0.75rem;
+    pointer-events: none;
+}
+
+.video-card:hover::before {
+    opacity: 1;
+}
+
+.video-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+
+.sidebar-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.sidebar-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 60%;
+    background: linear-gradient(90deg, #60a5fa, #93c5fd);
+    border-radius: 0 6px 6px 0;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
+}
+
+.sidebar-item:hover::before,
+.sidebar-item.active::before {
+    width: 4px;
+}
+
+.sidebar-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 1);
+    transform: translateX(2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-item.active {
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.upload-area {
+    border: 2px dashed #3b82f6;
+    transition: all 0.3s ease;
+    position: relative;
+    background: rgba(59, 130, 246, 0.02);
+}
+
+.upload-area::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.1);
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.upload-area:hover {
+    border-color: #2563eb;
+    background: rgba(59, 130, 246, 0.08);
+    transform: scale(1.02);
+}
+
+
+.thumbnail-preview {
+    position: relative;
+    overflow: hidden;
+}
+
+.thumbnail-preview:hover .thumbnail-overlay {
+    opacity: 1;
+}
+
+.thumbnail-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.loading-spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.progress-bar {
+    transition: width 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, 
+        transparent,
+        rgba(255,255,255,0.3),
+        transparent
+    );
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+.bg-gradient-to-r.from-purple-600.to-blue-600 {
+    background: linear-gradient(to right, #3b82f6, #2563eb) !important;
+}
+
+
+.floating-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.floating-shape {
+    position: absolute;
+    opacity: 0.25;
+    animation: floatMega 12s infinite ease-in-out;
+    filter: blur(0.5px);
+}
+
+.floating-shape:nth-child(1) {
+    top: -10%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.4), rgba(59, 130, 246, 0.4));
+    border-radius: 35% 65% 70% 30% / 40% 50% 50% 60%;
+    animation-duration: 10s;
+}
+
+.floating-shape:nth-child(2) {
+    bottom: -15%;
+    right: -15%;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(225deg, rgba(59, 130, 246, 0.5), rgba(37, 99, 235, 0.4));
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation-duration: 12s;
+    animation-delay: -4s;
+}
+
+.floating-shape:nth-child(3) {
+    top: 30%;
+    left: 40%;
+    width: 450px;
+    height: 450px;
+    background: linear-gradient(315deg, rgba(99, 102, 241, 0.4), rgba(139, 92, 246, 0.4));
+    border-radius: 47% 53% 42% 58% / 45% 48% 52% 55%;
+    animation-duration: 14s;
+    animation-delay: -6s;
+}
+
+@keyframes floatMega {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    33% {
+        transform: translate(100px, -120px) rotate(120deg);
+    }
+    66% {
+        transform: translate(-120px, 100px) rotate(240deg);
+    }
+}
+
+
+button.gradient-bg {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+button.gradient-bg::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+button.gradient-bg:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+
+.bg-white {
+    position: relative;
+}
+
+.bg-white::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 70%
+    );
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #3b82f6, #2563eb);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #2563eb, #1d4ed8);
+}
+
+
+.pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+
+.breathing-glow {
+    animation: breathingGlow 3s ease-in-out infinite;
+}
+
+@keyframes breathingGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(118, 75, 162, 0.8);
+    }
+}
+
+
+.logo-breathing {
+    animation: breathingGlow 4s ease-in-out infinite;
+}
+
+
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s, opacity 0.6s;
+    opacity: 0;
+}
+
+.ripple:active::after {
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+    transition: 0s;
+}
+
+
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+
+@media (max-width: 768px) {
+    .floating-shape {
+        display: none;
+    }
+}
+
+
+.glass-morphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.text-glow {
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.3),
+        0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+
+.gradient-text {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+.text-purple-600,
+a.text-purple-600 {
+    color: #3b82f6 !important;
+}
+
+.text-purple-700,
+a.text-purple-700 {
+    color: #2563eb !important;
+}
+
+.hover\:text-purple-700:hover {
+    color: #2563eb !important;
+}
+
+.bg-purple-100 {
+    background-color: #dbeafe !important;
+}
+
+.text-purple-600.bg-purple-100 {
+    background-color: #dbeafe !important;
+    color: #2563eb !important;
+}
+
+.bg-purple-600 {
+    background-color: #3b82f6 !important;
+}
+
+.hover\:bg-purple-700:hover {
+    background-color: #2563eb !important;
+}
+
+.border-purple-500 {
+    border-color: #3b82f6 !important;
+}
+
+.ring-purple-500 {
+    --tw-ring-color: #3b82f6 !important;
+}
+
+.focus\:ring-purple-500:focus {
+    --tw-ring-color: #3b82f6 !important;
+}
+
+.grid-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.08) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 2px, transparent 2px);
+    background-size: 80px 80px;
+    animation: gridMove 25s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes gridMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(80px, 80px);
+    }
+}
+
+
+.elegant-text {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.elegant-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+
+.animated-border {
+    position: relative;
+}
+
+.animated-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #667eea, #764ba2, #3b82f6, #8b5cf6);
+    background-size: 300% 300%;
+    border-radius: inherit;
+    z-index: -1;
+    animation: gradientRotate 6s ease infinite;
+}
+
+@keyframes gradientRotate {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Auto-adjust height with scroll for dashboard statistics cards */
+.auto-scroll-card {
+    min-height: auto;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Auto-adjust height with scroll for Quick Actions Panel */
+.auto-scroll-panel {
+    min-height: auto;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.auto-scroll-grid {
+    min-height: auto;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar for auto-scroll elements */
+.auto-scroll-card::-webkit-scrollbar,
+.auto-scroll-panel::-webkit-scrollbar,
+.auto-scroll-grid::-webkit-scrollbar {
+    width: 6px;
+}
+
+.auto-scroll-card::-webkit-scrollbar-track,
+.auto-scroll-panel::-webkit-scrollbar-track,
+.auto-scroll-grid::-webkit-scrollbar-track {
+    background: #f7fafc;
+    border-radius: 3px;
+}
+
+.auto-scroll-card::-webkit-scrollbar-thumb,
+.auto-scroll-panel::-webkit-scrollbar-thumb,
+.auto-scroll-grid::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 3px;
+}
+
+.auto-scroll-card::-webkit-scrollbar-thumb:hover,
+.auto-scroll-panel::-webkit-scrollbar-thumb:hover,
+.auto-scroll-grid::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+/* Scrollbar for Firefox */
+.auto-scroll-card,
+.auto-scroll-panel,
+.auto-scroll-grid {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 #f7fafc;
+}
+
+/* Fixed height for employee statistics cards - no scroll */
+.fixed-stat-card {
+    height: 130px;
+    min-height: 130px;
+    max-height: 130px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* Scrollable sections (Continue Learning and Important Announcements) */
+.scrollable-section {
+    height: 500px;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.scrollable-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-right: 4px;
+}
+
+/* Custom scrollbar for scrollable sections */
+.scrollable-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+    background: #f7fafc;
+    border-radius: 3px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 3px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+/* Scrollbar for Firefox */
+.scrollable-content {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 #f7fafc;
+}
+
+/* Fixed height for Quick Actions panel - no scroll */
+.fixed-actions-panel {
+    height: auto;
+    min-height: auto;
+    overflow: visible;
+}
+
+.fixed-actions-grid {
+    overflow: visible;
+}
+
+.fixed-actions-grid button {
+    height: 140px;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .fixed-stat-card {
+        height: 110px;
+        min-height: 110px;
+        max-height: 110px;
+    }
+    
+    .scrollable-section {
+        height: 400px;
+        max-height: 400px;
+    }
+    
+    .fixed-actions-grid button {
+        height: 120px;
+        min-height: 120px;
+    }
+}

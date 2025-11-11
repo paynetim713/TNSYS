@@ -1,0 +1,43 @@
+[2025-11-04 00:21:03] [INFO] getBearerToken: Token found in URL parameter (length: 198)
+[2025-11-04 00:21:03] [INFO] verifyToken: Token verified successfully for user: aslm2l1k123 (ID: 6, Role: admin)
+[2025-11-04 00:21:03] [INFO] User authenticated: aslm2l1k123 with role: admin
+[2025-11-04 00:27:45] [INFO] getBearerToken: Token found in Authorization header (length: 190)
+[2025-11-04 00:27:45] [INFO] verifyToken: Token verified successfully for user: admin (ID: 1, Role: admin)
+[2025-11-04 00:27:45] [INFO] User authenticated: admin with role: admin
+[2025-11-04 00:27:49] [INFO] getBearerToken: Token found in Authorization header (length: 190)
+[2025-11-04 00:27:49] [INFO] verifyToken: Token verified successfully for user: admin (ID: 1, Role: admin)
+[2025-11-04 00:27:49] [INFO] User authenticated: admin with role: admin
+[2025-11-04 00:27:55] [INFO] getBearerToken: Token found in Authorization header (length: 190)
+[2025-11-04 00:27:55] [INFO] verifyToken: Token verified successfully for user: admin (ID: 1, Role: admin)
+[2025-11-04 00:27:55] [INFO] User authenticated: admin with role: admin
+[2025-11-04 00:28:24] [INFO] getBearerToken: Token found in URL parameter (length: 190)
+[2025-11-04 00:28:24] [INFO] verifyToken: Token verified successfully for user: admin (ID: 1, Role: admin)
+[2025-11-04 00:28:24] [INFO] User authenticated: admin with role: admin
+[2025-11-04 00:28:24] [INFO] requireAdmin: Checking admin access for user 'admin' (ID: 1)
+[2025-11-04 00:28:24] [INFO] requireAdmin: Token role: 'admin' (normalized: 'admin'), Database role: 'admin' (normalized: 'admin')
+[2025-11-04 00:28:24] [INFO] requireAdmin: Raw database role (hex): 61646d696e
+[2025-11-04 00:28:24] [INFO] requireAdmin: Admin access granted for user 'admin' (ID: 1)
+[2025-11-04 00:33:21] [INFO] getBearerToken: Token found in Authorization header (length: 190)
+[2025-11-04 00:33:21] [INFO] verifyToken: Token verified successfully for user: admin (ID: 1, Role: admin)
+[2025-11-04 00:33:21] [INFO] User authenticated: admin with role: admin
+[2025-11-04 00:33:31] [INFO] getBearerToken: Token found in URL parameter (length: 190)
+[2025-11-04 00:33:31] [INFO] verifyToken: Token verified successfully for user: admin (ID: 1, Role: admin)
+[2025-11-04 00:33:31] [INFO] User authenticated: admin with role: admin
+[2025-11-04 00:33:31] [INFO] getBearerToken: Token found in URL parameter (length: 190)
+[2025-11-04 00:33:31] [INFO] verifyToken: Token verified successfully for user: admin (ID: 1, Role: admin)
+[2025-11-04 00:33:31] [INFO] User authenticated: admin with role: admin
+[2025-11-04 00:33:34] [INFO] getBearerToken: Token found in Authorization header (length: 190)
+[2025-11-04 00:33:34] [INFO] verifyToken: Token verified successfully for user: admin (ID: 1, Role: admin)
+[2025-11-04 00:33:34] [INFO] User authenticated: admin with role: admin
+[2025-11-04 00:33:34] [INFO] getBearerToken: Token found in Authorization header (length: 190)
+[2025-11-04 00:33:34] [INFO] verifyToken: Token verified successfully for user: admin (ID: 1, Role: admin)
+[2025-11-04 00:33:34] [INFO] User authenticated: admin with role: admin
+[2025-11-04 00:33:34] [INFO] getBearerToken: Token found in Authorization header (length: 190)
+[2025-11-04 00:33:34] [INFO] verifyToken: Token verified successfully for user: admin (ID: 1, Role: admin)
+[2025-11-04 00:33:34] [INFO] User authenticated: admin with role: admin
+[2025-11-04 00:33:34] [INFO] getBearerToken: Token found in Authorization header (length: 190)
+[2025-11-04 00:33:34] [INFO] verifyToken: Token verified successfully for user: admin (ID: 1, Role: admin)
+[2025-11-04 00:33:34] [INFO] User authenticated: admin with role: admin
+[2025-11-04 01:35:53] [INFO] getBearerToken: Token found in URL parameter (length: 190)
+[2025-11-04 01:35:53] [INFO] verifyToken: Token verified successfully for user: admin (ID: 1, Role: admin)
+[2025-11-04 01:35:53] [INFO] User authenticated: admin with role: admin
